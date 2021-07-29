@@ -6,16 +6,22 @@
             </th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-car>
-        <tr>
-            <td *ngFor="let col of cols">
-                <a *ngIf="col.field === 'id'" (click)="onBookDetails(car[col.field])">{{car[col.field]}}</a>
-                <p *ngIf="col.field !== 'id' && col.field !== 'action'">
-                {{car[col.field]}}
-                </p>
-                <p *ngIf="col.field === 'action'">
-                    <button>delete</button>
-                </p>
+    <ng-template pTemplate="body">
+        <tr *ngFor="let book of books">
+            <td>
+                <a (click)="onBookDetails(book.id)" class="table-page-click">{{book.id}}</a>
+            </td>
+            <td (click)="onAuthorPage(book.id)" class="table-page-click">
+                {{book.author}}
+            </td>
+            <td>
+                {{book.title}}
+            </td>
+            <td>
+                <button pButton type="button"
+                        icon="pi pi-times"
+                        class="p-button-danger p-button-rounded"
+                        (click)="onDeleteBook(book.id)"></button>
             </td>
         </tr>
     </ng-template>

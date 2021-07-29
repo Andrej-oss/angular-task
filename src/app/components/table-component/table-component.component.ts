@@ -28,4 +28,14 @@ export class TableComponentComponent implements OnInit {
   onBookDetails(id: number) {
     console.log(id);
   }
+
+  onDeleteBook(id: number) {
+    console.log(id);
+    let index = this.books.findIndex(value => value.id === id);
+    this.books.splice(index, 1);
+  }
+
+  onAuthorPage(id: number) {
+
+  }
 }

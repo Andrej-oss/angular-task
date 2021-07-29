@@ -1,0 +1,6 @@
+.table-page-click{
+    cursor: pointer;
+}
+.table-page-click:hover{
+    color: grey;
+}
