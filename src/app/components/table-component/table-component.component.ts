@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Book} from "../../models/Book";
 import {BookDaoService} from "../../logic/services/book-dao.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-table-component',
@@ -11,14 +12,15 @@ export class TableComponentComponent implements OnInit {
   cols: any;
   books: Book[] = [];
 
-  constructor(private bookDaoService: BookDaoService) { }
+  constructor(private bookDaoService: BookDaoService, private router: Router) { }
 
   ngOnInit(): void {
+    debugger;
     if (!this.books.length){
       this.bookDaoService.getAllBooks().subscribe(books => this.books = books);
     }
     this.cols = [
-      { field: 'id', header: 'Id' },
+      { field: 'id', header: 'Id'},
       { field: 'author', header: 'Author' },
       { field: 'title', header: 'Title' },
       { field: 'action', header: 'Action' }
@@ -26,7 +28,7 @@ export class TableComponentComponent implements OnInit {
   }
 
   onBookDetails(id: number) {
-    console.log(id);
+    this.router.navigateByUrl(`/table/${id}`)
   }
 
   onDeleteBook(id: number) {

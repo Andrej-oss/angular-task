@@ -20,12 +20,15 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 import {routes} from "./logic/router-module/router-module.module";
+import { DetailComponentComponent } from './components/detail-component/detail-component.component';
+import {CardModule} from "primeng/card";
 
 @NgModule({
   declarations: [
     AppComponent,
     StartComponentComponent,
     TableComponentComponent,
+    DetailComponentComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ import {routes} from "./logic/router-module/router-module.module";
     ToastModule,
     InputTextModule,
     ProgressBarModule,
+      CardModule,
     HttpClientModule,
     FormsModule,
       HttpClientModule,

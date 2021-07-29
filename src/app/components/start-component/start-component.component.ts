@@ -17,11 +17,10 @@ export class StartComponentComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = [
-      {label: 'Home', icon: 'pi pi-fw pi-home'},
-      {label: 'Table', icon: 'pi pi-fw pi-calendar'},
+      {label: 'Home', icon: 'pi pi-fw pi-home', routerLink: '/home'},
+      {label: 'Table', icon: 'pi pi-fw pi-calendar', routerLink: '/table'},
       {label: 'Form', icon: 'pi pi-fw pi-pencil'},
     ];
     this.activeItem = this.items[0];
   }
-
 }

@@ -3,74 +3,86 @@
   "book": [{
     "id": 1,
     "author": "S.King",
-    "title": "Kujo",
-    "description": "bill@microsoft.com"
+    "title": "Cujo",
+    "description": "bill@microsoft.com",
+    "path": "../../../assets/img/cujo.jpg"
   },
     {
       "id": 2,
       "author": "S.King",
       "title": "11\\22\\63",
-      "description": "bill@microsoft.com"
+      "description": "bill@microsoft.com",
+      "path": "../../../assets/img/112263.jpg"
     },
     {
       "id": 3,
       "author": "S.King",
       "title": "It",
-      "description": "bill@microsoft.com"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "path": "../../../assets/img/it.jpg"
     },
     {
       "id": 4,
       "author": "S.King",
       "title": "It 2",
-      "description": "bill@microsoft.com"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "path": "../../../assets/img/it.jpg"
     },
     {
       "id": 5,
       "author": "S.King",
       "title": "Shining",
-      "description": "bill@microsoft.com"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "path": "../../../assets/img/shining.jpg"
     },
     {
       "id": 6,
       "author": "S.King",
       "title": "Misery",
-      "description": "bill@microsoft.com"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "path": "../../../assets/img/misery.jpg"
     },
     {
       "id": 7,
       "author": "S.King",
       "title": "Duma Key",
-      "description": "bill@microsoft.com"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "path": "../../../assets/img/dumakey.jpg"
     },
     {
       "id": 8,
       "author": "S.King",
       "title": "Salem's Lot",
-      "description": "bill@microsoft.com"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "path": "../../../assets/img/salemslot.jpg"
     },
     {
       "id": 9,
       "author": "S.King",
-      "title": "Dark Town",
-      "description": "bill@microsoft.com"
+      "title": "Dark Tower",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "path": "../../../assets/img/darktower.jpg"
     },
     {
       "id": 10,
       "author": "S.King",
-      "title": "Green Mile",
-      "description": "bill@microsoft.com"
+      "title": " The Green Mile",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "path": "../../../assets/img/thegreenmile.jpg"
     },
     {
       "id": 11,
       "author": "S.King",
       "title": "Dreemcatcher",
-      "description": "bill@microsoft.com"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "path": "../../../assets/img/dreemcatcher.jpg"
     },
     {
       "id": 12,
       "author": "S.King",
       "title": "Carrie",
-      "description": "bill@microsoft.com"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "path": "../../../assets/img/carrie.jpg"
     }
   ],
   "companies": [{

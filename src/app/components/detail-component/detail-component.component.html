@@ -1,0 +1,13 @@
+<button pButton type="button"
+        icon="pi pi-arrow-left"
+        class="p-button-warning p-button-rounded" (click)="onBack()"></button>
+<div *ngIf="!!book" class="detail-book-page">
+<p-card [header]="book.title" [subheader]="book.author" [style]="{width: '360px'}" styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+        <img alt="Card" [src]="book.path">
+    </ng-template>
+    <p>{{book.description}}</p>
+    <ng-template pTemplate="footer">
+        </ng-template>
+</p-card>
+</div>
