@@ -43,6 +43,7 @@ import {routes} from "./logic/router-module/router-module.module";
     ProgressBarModule,
     HttpClientModule,
     FormsModule,
+      HttpClientModule,
     RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
     BrowserAnimationsModule
   ],

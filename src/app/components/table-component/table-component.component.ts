@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Book} from "../../models/Book";
+import {BookDaoService} from "../../logic/services/book-dao.service";
 
 @Component({
   selector: 'app-table-component',
@@ -7,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableComponentComponent implements OnInit {
   cols: any;
+  books: Book[] = [];
 
-  constructor() { }
+  constructor(private bookDaoService: BookDaoService) { }
 
   ngOnInit(): void {
+    if (!this.books.length){
+      this.bookDaoService.getAllBooks().subscribe(books => this.books = books);
+    }
     this.cols = [
       { field: 'id', header: 'Id' },
       { field: 'author', header: 'Author' },
@@ -19,4 +25,7 @@ export class TableComponentComponent implements OnInit {
     ];
   }
 
+  onBookDetails(id: number) {
+    console.log(id);
+  }
 }
