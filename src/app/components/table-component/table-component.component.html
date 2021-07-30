@@ -27,3 +27,11 @@
     </ng-template>
 </p-table>
 <router-outlet></router-outlet>
+<tr *ngFor="let book of books ">
+    <td>
+        <a (click)="onBookDetails(book.id)" class="table-page-click">{{book.id}}</a>
+    </td>
+    <td (click)="onAuthorPage(book.author)" class="table-page-click">
+        {{book.author}}
+    </td>
+</tr>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MenuItem} from "primeng/api";
+import {BookActionService} from "../../logic/store/actions/actions-book/book-action.service";
 
 @Component({
   selector: 'app-start-component',
@@ -10,7 +11,7 @@ export class StartComponentComponent implements OnInit {
   items: MenuItem[];
   activeItem: MenuItem;
 
-  constructor() {
+  constructor(private bookActionService: BookActionService) {
     this.items = [];
     this.activeItem = {};
   }
@@ -22,5 +23,7 @@ export class StartComponentComponent implements OnInit {
       {label: 'Form', icon: 'pi pi-fw pi-pencil', routerLink: '/form'},
     ];
     this.activeItem = this.items[0];
+    this.bookActionService.getAllBookStore();
+    this.bookActionService.getAllAuthorsStore();
   }
 }

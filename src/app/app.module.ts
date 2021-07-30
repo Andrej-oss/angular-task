@@ -7,11 +7,15 @@ import { TableComponentComponent } from './components/table-component/table-comp
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
-import {routes} from "./logic/router-module/router-module.module";
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import {routes} from "./logic/modules/router-module.module";
 import { DetailComponentComponent } from './components/detail-component/detail-component.component';
 import { AuthorComponentComponent } from './components/author-component/author-component.component';
 import { FormComponentComponent } from './components/form-component/form-component.component';
-import {PrimeModuleModule} from "./logic/router-module/prime-module.module";
+import {PrimeModuleModule} from "./logic/modules/prime-module.module";
+import {StoreModule} from "@ngrx/store";
+import {metaReducers, reducers} from "./logic/store/reducers";
+import {environment} from "../environments/environment";
 
 @NgModule({
   declarations: [
@@ -28,6 +32,14 @@ import {PrimeModuleModule} from "./logic/router-module/prime-module.module";
     FormsModule,
     HttpClientModule,
       PrimeModuleModule,
+      StoreModule.forRoot(reducers, {
+        metaReducers,
+        runtimeChecks: {
+          strictStateImmutability: true,
+          strictActionImmutability: true
+        }
+      }),
+    StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
     RouterModule.forRoot(routes, {relativeLinkResolution: 'legacy'}),
     BrowserAnimationsModule,
     ReactiveFormsModule
