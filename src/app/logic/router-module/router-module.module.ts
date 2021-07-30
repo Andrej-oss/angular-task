@@ -4,11 +4,13 @@ import {StartComponentComponent} from "../../components/start-component/start-co
 import {TableComponentComponent} from "../../components/table-component/table-component.component";
 import {DetailComponentComponent} from "../../components/detail-component/detail-component.component";
 import {AuthorComponentComponent} from "../../components/author-component/author-component.component";
+import {FormComponentComponent} from "../../components/form-component/form-component.component";
 
 export const routes: Routes = [
   {path: '', component: StartComponentComponent},
   {path: 'home', component: StartComponentComponent},
   {path: 'table', component: TableComponentComponent},
   {path: 'table/:id', component: DetailComponentComponent},
-  {path: 'table/author/:name', component: AuthorComponentComponent}
+  {path: 'table/author/:name', component: AuthorComponentComponent},
+  {path: 'form', component: FormComponentComponent}
 ];

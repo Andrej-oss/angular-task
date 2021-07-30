@@ -19,7 +19,7 @@ export class StartComponentComponent implements OnInit {
     this.items = [
       {label: 'Home', icon: 'pi pi-fw pi-home', routerLink: '/home'},
       {label: 'Table', icon: 'pi pi-fw pi-calendar', routerLink: '/table'},
-      {label: 'Form', icon: 'pi pi-fw pi-pencil'},
+      {label: 'Form', icon: 'pi pi-fw pi-pencil', routerLink: '/form'},
     ];
     this.activeItem = this.items[0];
   }

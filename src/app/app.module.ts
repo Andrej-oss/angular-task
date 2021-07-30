@@ -3,26 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './components/app-page/app.component';
 import { StartComponentComponent } from './components/start-component/start-component.component';
-import {TabMenuModule} from 'primeng/tabmenu';
-import {TableModule} from 'primeng/table';
-import {CalendarModule} from 'primeng/calendar';
-import {SliderModule} from 'primeng/slider';
-import {DialogModule} from 'primeng/dialog';
-import {MultiSelectModule} from 'primeng/multiselect';
-import {ContextMenuModule} from 'primeng/contextmenu';
-import {ButtonModule} from 'primeng/button';
-import {ToastModule} from 'primeng/toast';
-import {InputTextModule} from 'primeng/inputtext';
-import {ProgressBarModule} from 'primeng/progressbar';
-import {DropdownModule} from 'primeng/dropdown';
 import { TableComponentComponent } from './components/table-component/table-component.component';
 import {HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 import {routes} from "./logic/router-module/router-module.module";
 import { DetailComponentComponent } from './components/detail-component/detail-component.component';
-import {CardModule} from "primeng/card";
 import { AuthorComponentComponent } from './components/author-component/author-component.component';
+import { FormComponentComponent } from './components/form-component/form-component.component';
+import {PrimeModuleModule} from "./logic/router-module/prime-module.module";
 
 @NgModule({
   declarations: [
@@ -31,27 +20,17 @@ import { AuthorComponentComponent } from './components/author-component/author-c
     TableComponentComponent,
     DetailComponentComponent,
     AuthorComponentComponent,
+    FormComponentComponent,
   ],
   imports: [
     BrowserModule,
-    TabMenuModule,
-    TableModule,
-    CalendarModule,
-    SliderModule,
-    DialogModule,
-    MultiSelectModule,
-    ContextMenuModule,
-    DropdownModule,
-    ButtonModule,
-    ToastModule,
-    InputTextModule,
-    ProgressBarModule,
-      CardModule,
     HttpClientModule,
     FormsModule,
-      HttpClientModule,
-    RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
-    BrowserAnimationsModule
+    HttpClientModule,
+      PrimeModuleModule,
+    RouterModule.forRoot(routes, {relativeLinkResolution: 'legacy'}),
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
