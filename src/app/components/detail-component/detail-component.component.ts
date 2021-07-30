@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Book} from "../../models/Book";
 import {ActivatedRoute, ActivatedRouteSnapshot} from "@angular/router";
-import {BookDaoService} from "../../logic/services/book-dao.service";
+import {BookDaoService} from "../../logic/services/bookDao/book-dao.service";
 
 @Component({
   selector: 'app-detail-component',

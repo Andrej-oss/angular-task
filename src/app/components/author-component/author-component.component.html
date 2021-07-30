@@ -1,0 +1,13 @@
+<button pButton type="button"
+        icon="pi pi-arrow-left"
+        class="p-button-warning p-button-rounded" (click)="onBack()"></button>
+<div *ngIf="!!author" class="detail-author-page">
+    <p-card [header]="author.name + ' ' + author.surname" [style]="{width: '360px'}" styleClass="p-card-shadow">
+        <ng-template pTemplate="header">
+            <img alt="Card" [src]="author.path">
+        </ng-template>
+        <p>{{author.biography}}</p>
+        <ng-template pTemplate="footer">
+        </ng-template>
+    </p-card>
+</div>

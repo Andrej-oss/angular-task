@@ -22,6 +22,7 @@ import {RouterModule} from "@angular/router";
 import {routes} from "./logic/router-module/router-module.module";
 import { DetailComponentComponent } from './components/detail-component/detail-component.component';
 import {CardModule} from "primeng/card";
+import { AuthorComponentComponent } from './components/author-component/author-component.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import {CardModule} from "primeng/card";
     StartComponentComponent,
     TableComponentComponent,
     DetailComponentComponent,
+    AuthorComponentComponent,
   ],
   imports: [
     BrowserModule,

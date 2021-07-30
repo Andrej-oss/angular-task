@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Book} from "../../models/Book";
-import {BookDaoService} from "../../logic/services/book-dao.service";
+import {BookDaoService} from "../../logic/services/bookDao/book-dao.service";
 import {Router} from "@angular/router";
 
 @Component({
@@ -37,7 +37,7 @@ export class TableComponentComponent implements OnInit {
     this.books.splice(index, 1);
   }
 
-  onAuthorPage(id: number) {
-
+  onAuthorPage(name: string) {
+    this.router.navigateByUrl(`/table/author/${name}`);
   }
 }

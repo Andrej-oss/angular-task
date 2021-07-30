@@ -40,7 +40,7 @@
       "author": "S.King",
       "title": "Misery",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "path": "../../../assets/img/misery.jpg"
+      "path": "../../../assets/img/misery.png"
     },
     {
       "id": 7,
@@ -85,17 +85,26 @@
       "path": "../../../assets/img/carrie.jpg"
     }
   ],
-  "companies": [{
+  "author": [{
     "id": 1,
-    "name": "Microsoft"
+    "name": "Stephen",
+    "surname": "King",
+    "biography": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "path": "../../../assets/img/king.jpg"
   },
     {
       "id": 2,
-      "name": "Facebook"
+      "name": "William",
+      "surname": "Shakespeare",
+      "biography": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "path": "../../../assets/img/shekspire.jpg"
     },
     {
       "id": 3,
-      "name": "Amazon"
+      "name": "Conan",
+      "surname": "Doyle",
+      "biography": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "path": "../../../assets/img/doyle.jpg"
     }
   ]
 
