@@ -15,4 +15,8 @@ export class AuthorDaoService {
   getAllAuthors(): Observable<Author[]>{
     return this.httpClient.get<Author[]>(this.authorURL);
   }
+  getAuthorByName(name: string): Observable<Author[]>{
+    debugger;
+    return this.httpClient.get<Author[]>(this.authorURL + `?surname=${name}`);
+  }
 }

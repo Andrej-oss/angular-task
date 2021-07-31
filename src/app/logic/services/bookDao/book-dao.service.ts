@@ -16,9 +16,9 @@ export class BookDaoService {
     return this.httpClient.get<Book[]>(this.bookUrl);
   }
   getOneBook(id: number): Observable<Book>{
-    return this.httpClient.get<Book>(this.bookUrl);
+    return this.httpClient.get<Book>(this.bookUrl + `/${id}`);
   }
   getBooksByAuthor(name: string): Observable<Book[]>{
-    return this.httpClient.get<Book[]>(this.bookUrl);
+    return this.httpClient.get<Book[]>(this.bookUrl + `/${name}`);
   }
 }

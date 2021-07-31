@@ -16,6 +16,8 @@ import {PrimeModuleModule} from "./logic/modules/prime-module.module";
 import {StoreModule} from "@ngrx/store";
 import {metaReducers, reducers} from "./logic/store/reducers";
 import {environment} from "../environments/environment";
+import {EffectsModule} from "@ngrx/effects";
+import {AppEffect} from "./logic/store/effects/app.effect";
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import {environment} from "../environments/environment";
         }
       }),
     StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
+      EffectsModule.forRoot([AppEffect]),
     RouterModule.forRoot(routes, {relativeLinkResolution: 'legacy'}),
     BrowserAnimationsModule,
     ReactiveFormsModule

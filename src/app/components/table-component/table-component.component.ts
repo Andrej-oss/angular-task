@@ -6,6 +6,7 @@ import {select, Store} from "@ngrx/store";
 import {allBooksSelector} from "../../logic/store/selectors/bookSelector";
 import {Observable} from "rxjs";
 import {BookActionService} from "../../logic/store/actions/actions-book/book-action.service";
+import {BooksLoadEffect} from "../../logic/store/actions/types/bookActionsType";
 
 @Component({
     selector: 'app-table-component',
@@ -25,7 +26,7 @@ export class TableComponentComponent implements OnInit {
     ngOnInit(): void {
         this.$store.pipe((select(allBooksSelector))).subscribe(data => this.books = data);
         if (!this.books.length){
-            this.bookService.getAllBookStore();
+           // this.$store.dispatch(new BooksLoadEffect());
         }
         this.cols = [
             {field: 'id', header: 'Id'},

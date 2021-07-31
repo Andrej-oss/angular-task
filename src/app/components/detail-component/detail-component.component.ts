@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {Book} from "../../models/Book";
-import {ActivatedRoute, ActivatedRouteSnapshot} from "@angular/router";
+import {ActivatedRoute} from "@angular/router";
 import {BookDaoService} from "../../logic/services/bookDao/book-dao.service";
+import {select, Store} from "@ngrx/store";
+import {BookIdLoadEffect} from "../../logic/store/actions/types/bookActionsType";
+import {Observable} from "rxjs";
+import {bookSelector, oneBookSelector} from "../../logic/store/selectors/bookSelector";
 
 @Component({
   selector: 'app-detail-component',
@@ -9,17 +13,16 @@ import {BookDaoService} from "../../logic/services/bookDao/book-dao.service";
   styleUrls: ['./detail-component.component.css']
 })
 export class DetailComponentComponent implements OnInit {
-   books: Book[] = [];
-   book: Book | undefined;
+   book: Book | undefined | null;
 
   constructor(private activatedRoute: ActivatedRoute,
+              private $store: Store,
               private bookDaoService: BookDaoService) {
   }
 
   ngOnInit(): void {
-      this.bookDaoService.getAllBooks().subscribe(books => {
-        this.book = books.find(value => value.id === +this.activatedRoute.snapshot.params.id)
-      });
+    this.$store.pipe(select(oneBookSelector)).subscribe(data => this.book = data);
+      this.$store.dispatch(new BookIdLoadEffect(+this.activatedRoute.snapshot.params.id))
   }
 
   onBack() {

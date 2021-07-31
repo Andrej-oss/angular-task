@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {AuthorDaoService} from "../../logic/services/authorDao/author-dao.service";
 import {Author} from "../../models/Author";
 import {ActivatedRoute, ActivatedRouteSnapshot} from "@angular/router";
+import {select, Store} from "@ngrx/store";
+import {oneAuthorSelector} from "../../logic/store/selectors/bookSelector";
+import {AuthorLoadEffect} from "../../logic/store/actions/types/bookActionsType";
+import {BookActionService} from "../../logic/store/actions/actions-book/book-action.service";
 
 @Component({
   selector: 'app-author-component',
@@ -10,17 +14,17 @@ import {ActivatedRoute, ActivatedRouteSnapshot} from "@angular/router";
 })
 export class AuthorComponentComponent implements OnInit {
   authors: Author[] = [];
-  author: Author | undefined;
+  author: Author | undefined | null;
 
   constructor(private authorDaoService: AuthorDaoService,
+              private store$: Store,
+              private bookActionService: BookActionService,
               private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    if (!this.authors.length){
-      this.authorDaoService.getAllAuthors().subscribe(value => {
-        this.author = value.find(author => this.getSerNameAuthor(this.activatedRoute.snapshot.params.name) === author.surname);
-      });
-    }
+    //this.store$.dispatch(new AuthorLoadEffect(this.getSerNameAuthor(this.activatedRoute.snapshot.params.name)));
+    this.bookActionService.getAuthorByName(this.getSerNameAuthor(this.activatedRoute.snapshot.params.name));
+    this.store$.pipe(select(oneAuthorSelector)).subscribe(author => this.author = author);
   }
 
   onBack() {

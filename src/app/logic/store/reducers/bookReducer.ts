@@ -1,23 +1,51 @@
-import {InitialState} from "@ngrx/store/src/models";
-import {BookAction, BookActionsType} from "../actions/types/bookActionsType";
+import {BookAction, BookActionsType, getAuthors, getBooks} from "../actions/types/bookActionsType";
 import {initialState} from "../../../models/initialState";
+import {createReducer, on} from "@ngrx/store";
+import {reducers} from "./index";
 
 export const bookNode = 'book';
 
 export const bookReducer = (state = initialState, action: BookAction ) => {
+    debugger
     switch (action.type) {
+        case BookActionsType.successLoadedBooks:{
+            return {
+                ...state,
+                books: action.payload
+            }
+        }
+        case BookActionsType.getOneBook: {
+            return {
+                ...state,
+                book: action.payload
+            }
+        }
+        case BookActionsType.successLoadedAuthors:{
+            debugger;
+            return {
+                ...state,
+                authors: action.payload
+            }
+        }
         case BookActionsType.getAllBooks:{
             return {
                 ...state,
                books: action.payload
             };
         }
-        case BookActionsType.getAllAuthors:{
+        case BookActionsType.successLoadedAuthor:{
+            debugger
             return {
                 ...state,
-                authors: action.payload
+                author: action.payload[0]
             }
         }
+        // case BookActionsType.getAllAuthors:{
+        //     return {
+        //         ...state,
+        //         authors: action.payload
+        //     }
+        // }
         case BookActionsType.saveBookStore: {
             const {books} = state;
             return {
@@ -30,3 +58,13 @@ export const bookReducer = (state = initialState, action: BookAction ) => {
         }
     }
 };
+export const BookReducer = createReducer(initialState,
+    on(getBooks, (state, action) => ({
+        ...state,
+        books: action.payload
+    })),
+    on(getAuthors, (state, action) => ({
+        ...state,
+        authors: action.payload
+    }))
+)

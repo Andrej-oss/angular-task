@@ -32,12 +32,12 @@ export class FormComponentComponent implements OnInit {
 
     onSubmit(form: FormGroup) {
       console.log(form);
-          this.book = {
-            id: form.controls.id.value,
-            author: form.controls.forums.value,
-            title: form.controls.title.value
-          };
-          this.bookActionService.saveBookStore(this.book);
+          // this.book = {
+          //   id: form.controls.id.value,
+          //   author: form.controls.forums.value,
+          //   title: form.controls.title.value
+          // };
+          // this.bookActionService.saveBookStore(this.book);
           this.bookForm.reset();
     }
 }

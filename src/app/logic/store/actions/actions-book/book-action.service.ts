@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {BookDaoService} from "../../../services/bookDao/book-dao.service";
 import {Store} from "@ngrx/store";
-import {AuthorsLoad, BookSaveStore, BooksLoad} from "../types/bookActionsType";
+import {AuthorsSuccessLoad, BookSaveStore, BooksLoad, SuccessAuthorOneLoad} from "../types/bookActionsType";
 import {AuthorDaoService} from "../../../services/authorDao/author-dao.service";
 import {Book} from "../../../../models/Book";
 
@@ -20,7 +20,12 @@ export class BookActionService {
   }
   getAllAuthorsStore(): |{}{
     return this.authorService.getAllAuthors()
-        .subscribe(value => this.store.dispatch(new AuthorsLoad(value)));
+        .subscribe(value => this.store.dispatch(new AuthorsSuccessLoad(value)));
+  }
+  getAuthorByName(name: string): |{}{
+    debugger
+    return this.authorService.getAuthorByName(name)
+        .subscribe(value => this.store.dispatch(new SuccessAuthorOneLoad(value)));
   }
   saveBookStore(book: Book){
     return this.store.dispatch(new BookSaveStore(book));
