@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {Book} from "../../models/Book";
+import {Book, BookImpl} from "../../models/Book";
 import {BookActionService} from "../../logic/store/actions/actions-book/book-action.service";
 
 @Component({
@@ -13,7 +13,7 @@ export class FormComponentComponent implements OnInit {
     id: FormControl;
     author: FormControl;
     title: FormControl;
-    book: Book | undefined;
+    book: BookImpl = new BookImpl();
 
     constructor(private bookActionService: BookActionService) {
         this.bookForm = new FormGroup({
@@ -32,12 +32,14 @@ export class FormComponentComponent implements OnInit {
 
     onSubmit(form: FormGroup) {
       console.log(form);
-          // this.book = {
-          //   id: form.controls.id.value,
-          //   author: form.controls.forums.value,
-          //   title: form.controls.title.value
-          // };
-          // this.bookActionService.saveBookStore(this.book);
+          this.book = {
+            id: +form.controls.id.value,
+            author: form.controls.author.value,
+            title: form.controls.title.value,
+              description: '',
+              path: ''
+          };
+          this.bookActionService.saveBookStore(this.book);
           this.bookForm.reset();
     }
 }

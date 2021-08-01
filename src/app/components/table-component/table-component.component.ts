@@ -25,9 +25,6 @@ export class TableComponentComponent implements OnInit {
 
     ngOnInit(): void {
         this.$store.pipe((select(allBooksSelector))).subscribe(data => this.books = data);
-        if (!this.books.length){
-           // this.$store.dispatch(new BooksLoadEffect());
-        }
         this.cols = [
             {field: 'id', header: 'Id'},
             {field: 'author', header: 'Author'},
@@ -42,8 +39,7 @@ export class TableComponentComponent implements OnInit {
 
     onDeleteBook(id: number) {
         console.log(id);
-        // let index = this.books.findIndex(value => value.id === id);
-        // this.books.splice(index, 1);
+        this.bookService.deleteBookStore(id);
     }
 
     onAuthorPage(name: string) {

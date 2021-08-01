@@ -20,6 +20,17 @@ export const bookReducer = (state = initialState, action: BookAction ) => {
                 book: action.payload
             }
         }
+        case BookActionsType.deleteBookInStore: {
+            let number = state.books.findIndex(value => value.id === action.payload);
+            debugger;
+            let books = state.books;
+            books.splice(number, 1);
+            debugger;
+            return  {
+                ...state,
+                books: books
+            };
+        }
         case BookActionsType.successLoadedAuthors:{
             debugger;
             return {

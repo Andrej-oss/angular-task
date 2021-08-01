@@ -18,6 +18,7 @@ import {metaReducers, reducers} from "./logic/store/reducers";
 import {environment} from "../environments/environment";
 import {EffectsModule} from "@ngrx/effects";
 import {AppEffect} from "./logic/store/effects/app.effect";
+import { HistoryComponentComponent } from './components/history-component/history-component.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {AppEffect} from "./logic/store/effects/app.effect";
     DetailComponentComponent,
     AuthorComponentComponent,
     FormComponentComponent,
+    HistoryComponentComponent,
   ],
   imports: [
     BrowserModule,

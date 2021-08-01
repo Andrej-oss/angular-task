@@ -12,6 +12,7 @@ export enum BookActionsType {
     getAuthorByNameThisEffect = '[AUTHOR] get one by name this effects',
     getAllAuthors = '[AUTHOR] get all',
     saveBookStore = '[book] save in store',
+    deleteBookInStore = '[book] deleted in store',
     getOneBook = '[BOOK] get one',
     getBookByAuthor = '[BOOK] get book by author',
     getOneAuthor = '[AUTHOR] get one author',
@@ -65,7 +66,6 @@ export class SuccessBookByAuthorLoad implements Actions{
 export class SuccessAuthorOneLoad implements Actions{
     readonly type = BookActionsType.successLoadedAuthor;
     constructor(public payload: Author[]) {
-        debugger;
     }
 }
 // @ts-ignore
@@ -115,6 +115,12 @@ export class BookAuthorLoadEffect implements Actions{
         this.name = name;
     }
 }
+export class DeleteBookInStore {
+    readonly type = BookActionsType.deleteBookInStore;
+    constructor(public payload: number) {
+        debugger;
+    }
+}
 export type BookAction =
     BooksLoad
     | AuthorsSuccessLoad
@@ -127,4 +133,5 @@ export type BookAction =
     | ErrorAuthorLoad
     | BooksLoadEffect
     | AuthorsLoadEffect
-    | BookIdLoadEffect;
+    | BookIdLoadEffect
+    | DeleteBookInStore;

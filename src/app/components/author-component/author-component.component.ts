@@ -6,6 +6,7 @@ import {select, Store} from "@ngrx/store";
 import {oneAuthorSelector} from "../../logic/store/selectors/bookSelector";
 import {AuthorLoadEffect} from "../../logic/store/actions/types/bookActionsType";
 import {BookActionService} from "../../logic/store/actions/actions-book/book-action.service";
+import {ObjectHistory} from "../../models/ObjectHistory";
 
 @Component({
   selector: 'app-author-component',
@@ -23,14 +24,14 @@ export class AuthorComponentComponent implements OnInit {
 
   ngOnInit(): void {
     //this.store$.dispatch(new AuthorLoadEffect(this.getSerNameAuthor(this.activatedRoute.snapshot.params.name)));
-    this.bookActionService.getAuthorByName(this.getSerNameAuthor(this.activatedRoute.snapshot.params.name));
+    this.bookActionService.getAuthorByName(this.getSurNameAuthor(this.activatedRoute.snapshot.params.name));
     this.store$.pipe(select(oneAuthorSelector)).subscribe(author => this.author = author);
   }
 
   onBack() {
     window.history.back();
   }
-  getSerNameAuthor(name: string): string{
+  getSurNameAuthor(name: string): string{
    let slice = name.split('.');
    return slice[1].toString();
   }

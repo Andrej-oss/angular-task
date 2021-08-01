@@ -5,3 +5,11 @@ export interface Book {
     description: string,
     path: string,
 }
+export class BookImpl implements Book{
+    author = '';
+    description = '';
+    id = 0;
+    path = '';
+    title = '';
+
+}
