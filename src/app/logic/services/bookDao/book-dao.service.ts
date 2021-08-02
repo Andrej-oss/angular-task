@@ -21,4 +21,7 @@ export class BookDaoService {
   getBooksByAuthor(name: string): Observable<Book[]>{
     return this.httpClient.get<Book[]>(this.bookUrl + `/${name}`);
   }
+  saveBook(book: Book): Observable<Book>{
+    return this.httpClient.post<Book>(this.bookUrl, book);
+  }
 }

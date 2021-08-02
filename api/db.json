@@ -1,12 +1,12 @@
-
 {
-  "book": [{
-    "id": 1,
-    "author": "S.King",
-    "title": "Cujo",
-    "description": "bill@microsoft.com",
-    "path": "../../../assets/img/cujo.jpg"
-  },
+  "book": [
+    {
+      "id": 1,
+      "author": "S.King",
+      "title": "Cujo",
+      "description": "bill@microsoft.com",
+      "path": "../../../assets/img/cujo.jpg"
+    },
     {
       "id": 2,
       "author": "S.King",
@@ -83,15 +83,37 @@
       "title": "Carrie",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "path": "../../../assets/img/carrie.jpg"
+    },
+    {
+      "id": 24,
+      "author": "A.ConnanDoyle",
+      "title": "Faust",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "path": "../../../assets/img/default.jpg"
+    },
+    {
+      "id": 25,
+      "author": "W.Shakspeare",
+      "title": "Romeo",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "path": "../../../assets/img/default.jpg"
+    },
+    {
+      "id": 26,
+      "author": "U.Unknow",
+      "title": "Untitled",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "path": "../../../assets/img/default.jpg"
     }
   ],
-  "author": [{
-    "id": 1,
-    "name": "Stephen",
-    "surname": "King",
-    "biography": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "path": "../../../assets/img/king.jpg"
-  },
+  "author": [
+    {
+      "id": 1,
+      "name": "Stephen",
+      "surname": "King",
+      "biography": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "path": "../../../assets/img/king.jpg"
+    },
     {
       "id": 2,
       "name": "William",
@@ -107,5 +129,4 @@
       "path": "../../../assets/img/doyle.jpg"
     }
   ]
-
 }

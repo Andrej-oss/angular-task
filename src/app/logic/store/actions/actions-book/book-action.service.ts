@@ -20,14 +20,6 @@ export class BookActionService {
               private authorService: AuthorDaoService,
               private store: Store) { }
 
-  getAllBookStore(): |{}{
-    return this.bookService.getAllBooks()
-        .subscribe(value => this.store.dispatch(new BooksLoad(value)));
-  }
-  getAllAuthorsStore(): |{}{
-    return this.authorService.getAllAuthors()
-        .subscribe(value => this.store.dispatch(new AuthorsSuccessLoad(value)));
-  }
   getAuthorByName(name: string): |{}{
     debugger
     return this.authorService.getAuthorByName(name)

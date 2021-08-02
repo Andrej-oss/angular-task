@@ -6,8 +6,8 @@
             </th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body">
-        <tr *ngFor="let book of books">
+    <ng-template pTemplate="body" let-book>
+        <tr>
             <td>
                 <a (click)="onBookDetails(book.id)" class="table-page-click">{{book.id}}</a>
             </td>
@@ -27,11 +27,3 @@
     </ng-template>
 </p-table>
 <router-outlet></router-outlet>
-<tr *ngFor="let book of books ">
-    <td>
-        <a (click)="onBookDetails(book.id)" class="table-page-click">{{book.id}}</a>
-    </td>
-    <td (click)="onAuthorPage(book.author)" class="table-page-click">
-        {{book.author}}
-    </td>
-</tr>

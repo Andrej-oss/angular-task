@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthorDaoService} from "../../logic/services/authorDao/author-dao.service";
 import {Author} from "../../models/Author";
-import {ActivatedRoute, ActivatedRouteSnapshot} from "@angular/router";
+import {ActivatedRoute} from "@angular/router";
 import {select, Store} from "@ngrx/store";
-import {oneAuthorSelector} from "../../logic/store/selectors/bookSelector";
-import {AuthorLoadEffect} from "../../logic/store/actions/types/bookActionsType";
+import {allBooksSelector, oneAuthorSelector} from "../../logic/store/selectors/bookSelector";
 import {BookActionService} from "../../logic/store/actions/actions-book/book-action.service";
-import {ObjectHistory} from "../../models/ObjectHistory";
+import {Book} from "../../models/Book";
 
 @Component({
   selector: 'app-author-component',
@@ -14,7 +13,7 @@ import {ObjectHistory} from "../../models/ObjectHistory";
   styleUrls: ['./author-component.component.css']
 })
 export class AuthorComponentComponent implements OnInit {
-  authors: Author[] = [];
+  books: Book[] = [];
   author: Author | undefined | null;
 
   constructor(private authorDaoService: AuthorDaoService,
@@ -23,9 +22,26 @@ export class AuthorComponentComponent implements OnInit {
               private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    //this.store$.dispatch(new AuthorLoadEffect(this.getSerNameAuthor(this.activatedRoute.snapshot.params.name)));
-    this.bookActionService.getAuthorByName(this.getSurNameAuthor(this.activatedRoute.snapshot.params.name));
-    this.store$.pipe(select(oneAuthorSelector)).subscribe(author => this.author = author);
+    this.store$.pipe(select(allBooksSelector)).subscribe(books => this.books = books );
+    debugger;
+    if (this.books.length){
+      debugger;
+      let find = this.books.find(book => book.author === this.activatedRoute.snapshot.params.name && (book.author !== 'S.King'));
+      if (!!find){
+        debugger
+        this.author = {
+          id: 1,
+          name: find.author,
+          surname: find.author,
+          biography: find.description,
+          path: '../../../assets/img/author.jpg'
+        }
+      }
+      else if (!find){
+        this.bookActionService.getAuthorByName(this.getSurNameAuthor(this.activatedRoute.snapshot.params.name));
+        this.store$.pipe(select(oneAuthorSelector)).subscribe(author => this.author = author);
+      }
+    }
   }
 
   onBack() {

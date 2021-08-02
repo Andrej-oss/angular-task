@@ -10,5 +10,5 @@ export class HistoryImpl implements History{
     '/home' = 'HOME';
     '/table' = 'BOOKS';
     '/table/' = 'BOOK';
-    '/table/author/' = 'ACTOR';
+    '/table/author/' = 'AUTHOR';
 }

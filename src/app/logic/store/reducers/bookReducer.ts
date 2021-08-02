@@ -1,7 +1,6 @@
-import {BookAction, BookActionsType, getAuthors, getBooks} from "../actions/types/bookActionsType";
+import {BookAction, BookActionsType} from "../actions/types/bookActionsType";
 import {initialState} from "../../../models/initialState";
-import {createReducer, on} from "@ngrx/store";
-import {reducers} from "./index";
+
 
 export const bookNode = 'book';
 
@@ -23,7 +22,7 @@ export const bookReducer = (state = initialState, action: BookAction ) => {
         case BookActionsType.deleteBookInStore: {
             let number = state.books.findIndex(value => value.id === action.payload);
             debugger;
-            let books = state.books;
+            let books = [...state.books];
             books.splice(number, 1);
             debugger;
             return  {
@@ -38,12 +37,12 @@ export const bookReducer = (state = initialState, action: BookAction ) => {
                 authors: action.payload
             }
         }
-        case BookActionsType.getAllBooks:{
-            return {
-                ...state,
-               books: action.payload
-            };
-        }
+        // case BookActionsType.getAllBooks:{
+        //     return {
+        //         ...state,
+        //        books: action.payload
+        //     };
+        // }
         case BookActionsType.successLoadedAuthor:{
             debugger
             return {
@@ -69,13 +68,14 @@ export const bookReducer = (state = initialState, action: BookAction ) => {
         }
     }
 };
-export const BookReducer = createReducer(initialState,
-    on(getBooks, (state, action) => ({
-        ...state,
-        books: action.payload
-    })),
-    on(getAuthors, (state, action) => ({
-        ...state,
-        authors: action.payload
-    }))
-)
+// version 2 but not used
+// export const BookReducer = createReducer(initialState,
+//     on(getBooks, (state, action) => ({
+//         ...state,
+//         books: action.payload
+//     })),
+//     on(getAuthors, (state, action) => ({
+//         ...state,
+//         authors: action.payload
+//     }))
+// );

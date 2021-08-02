@@ -38,11 +38,10 @@ export class TableComponentComponent implements OnInit {
     }
 
     onDeleteBook(id: number) {
-        console.log(id);
         this.bookService.deleteBookStore(id);
     }
 
     onAuthorPage(name: string) {
-        this.router.navigateByUrl(`/table/author/${name}`);
+        this.router.navigate([`/table/author/${name}`]);
     }
 }

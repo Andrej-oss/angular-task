@@ -19,6 +19,7 @@ import {environment} from "../environments/environment";
 import {EffectsModule} from "@ngrx/effects";
 import {AppEffect} from "./logic/store/effects/app.effect";
 import { HistoryComponentComponent } from './components/history-component/history-component.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HistoryComponentComponent } from './components/history-component/histor
     AuthorComponentComponent,
     FormComponentComponent,
     HistoryComponentComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
