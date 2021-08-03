@@ -23,16 +23,13 @@ export class AuthorComponentComponent implements OnInit {
 
   ngOnInit(): void {
     this.store$.pipe(select(allBooksSelector)).subscribe(books => this.books = books );
-    debugger;
     if (this.books.length){
-      debugger;
       let find = this.books.find(book => book.author === this.activatedRoute.snapshot.params.name && (book.author !== 'S.King'));
       if (!!find){
-        debugger
         this.author = {
           id: 1,
           name: find.author,
-          surname: find.author,
+          surname: '',
           biography: find.description,
           path: '../../../assets/img/author.jpg'
         }
